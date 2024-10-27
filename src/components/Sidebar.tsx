@@ -3,7 +3,11 @@ import React from "react";
 import "@fortawesome/fontawesome-free/css/all.css";
 import { FiLogOut } from "react-icons/fi";
 
-const Sidebar: React.FC = () => {
+interface SidebarProps {
+  className?: string;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ className = "" }) => {
   return (
     <aside className="h-screen mt-20 bg-main-red text-white flex flex-col justify-between p-6 rounded-r-lg -slate-600">
       <div>
@@ -26,7 +30,7 @@ const Sidebar: React.FC = () => {
             <i className="fas fa-th-large mr-3"></i>
             Dashboard
           </a>
-          <a href="/vital-task" className="block text-lg flex items-center">
+          <a href="vital_task" className="block text-lg flex items-center">
             <i className="fas fa-exclamation-circle mr-3"></i>
             Vital Task
           </a>
